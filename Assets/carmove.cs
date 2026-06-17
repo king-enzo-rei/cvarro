@@ -21,15 +21,11 @@ public class carmove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        backWheelRig.AddTorque(movement * speed * Time.fixedDeltaTime);
-        frontWheelRig.AddTorque(movement * speed * Time.fixedDeltaTime);
-        carRig.AddTorque(movement * torque * Time.fixedDeltaTime);
+        backWheelRig.AddTorque(-movement * speed * Time.fixedDeltaTime);
+        frontWheelRig.AddTorque(-movement * speed * Time.fixedDeltaTime);
+        carRig.AddTorque(-movement * torque * Time.fixedDeltaTime);
 
 
 
     }
-
-
-
-
 }
